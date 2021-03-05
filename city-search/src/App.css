@@ -11,5 +11,6 @@
 
 .sizeCard{
   margin: auto;
-  max-width: 50%;
+  max-width: 15%;
+  text-align: center;
 }

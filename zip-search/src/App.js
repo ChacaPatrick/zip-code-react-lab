@@ -44,11 +44,11 @@ class App extends Component {
     // then, when you receive the result, store it in state
     fetch(`http://ctp-zip-api.herokuapp.com/zip/${e.target.value}`)
       .then(res => res.json())
-      .then(body => {
-        body.forEach(element => {
-          console.log(element["City"]);
+      .then(myJson => {
+        myJson.forEach(element => {
+          console.log(element.City);
         });
-        this.setState({cities: body}) //Holds array of objects 
+        this.setState({cities: myJson}) //Holds array of objects 
       })
       .catch(err=>{
         this.setState({cities: []})
